@@ -1,0 +1,74 @@
+.hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.heart {
+  position: absolute;
+  color: rgba(255, 126, 179, 0.3);
+  font-size: 18px;
+  animation: floatUp 10s linear infinite;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(100vh) scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-10vh) scale(1.2);
+    opacity: 1;
+  }
+}
+body {
+  background: linear-gradient(180deg, #ffd6e8, #f6bcd6);
+}
+
+.container {
+  background: rgba(255,255,255,0.9);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 800px;
+  margin: 60px auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 30px;
+  border-radius: 30px;
+  background: #ff7eb3;
+  color: white;
+  text-decoration: none;
+}
+/* Open-when cards layout */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.card {
+  display: block;
+  background: #ffe4ef;
+  padding: 18px 22px;
+  border-radius: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #4a2c3a;
+  font-size: 1rem;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.card:hover {
+  background: #ffd0e4;
+  transform: translateY(-6px);
+}
